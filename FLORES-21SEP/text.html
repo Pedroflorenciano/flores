@@ -1,16 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/main.css.css" />
     <link rel="icon" href="img/flowers.png" type="image/x-icon" />
     <title>Flower</title>
-  </head>
-  <body class="container">
-    <div id="lyrics">
-    </div>
+    <style>
+        /* Estilo del fondo */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            overflow: hidden;
+            color: #fffb00;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        /* Efecto de estrellas */
+        .night {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: black;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .night::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: transparent url('https://www.transparenttextures.com/patterns/stardust.png') repeat;
+            opacity: 0.5;
+        }
+
+        /* Título */
+        .titulo {
+            font-size: 2rem;
+            line-height: 1.5;
+            margin: 20px;
+            max-width: 800px;
+        }
+
+        /* Botón de acceder */
+        .button {
+            margin-top: 20px;
+        }
+
+        .botones {
+            background-color: #fffb00;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .botones:hover {
+            background-color: #fffb00;
+        }
+
+        .botones a {
+            color: white;
+            text-decoration: none;
+        }
+
+        /* Responsive: Ajuste en pantallas más pequeñas */
+        @media (max-width: 768px) {
+            .titulo {
+                font-size: 1.5rem;
+                margin: 10px;
+            }
+
+            .botones {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .titulo {
+                font-size: 1.2rem;
+            }
+
+            .botones {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="lyrics"></div>
 
     <h1 class="titulo">Amor mío, en este día en que la primavera florece y llena todo de colores y vida, 
         quiero recordarte que en mi corazón siempre es primavera cuando estoy contigo. Cada sonrisa tuya ilumina mi mundo, 
@@ -18,16 +112,18 @@
         ternura y momentos inolvidables. Hoy celebramos la primavera, pero para mí, lo más bello siempre serás tú. 
         <br> TE AMO CON TODO MI SER
     </h1>
-  
-    <div class="night"></div>
+
     <div class="flowers">
         <div class="button">
-            <button class="botones" onclick="validateCode()">
-                <a style="color: #fff;">ACCEDER</a>
+            <button class="botones">
+                <a href="flower.html" style="color: #fff;">AVANZAR</a>
             </button>
         </div>
-      
     </div>
+
+    <!-- Fondo de estrellas -->
+    <div class="night"></div>
+
     <script src="main.js"></script>
-  </body>
+</body>
 </html>

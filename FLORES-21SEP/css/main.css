@@ -20,7 +20,27 @@ body {
   perspective: 1000px;
 }
 
+.botones{
+  padding: 18px;
+  border-radius: 80px;
+  background-color: transparent;
+  border: none;
+}
 
+.botones a{
+  background-color: #969400;
+  padding: 10px;
+  border-radius: 80px;
+  -webkit-border-radius: 80px;
+  -moz-border-radius: 80px;
+  -ms-border-radius: 80px;
+  -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+  background-color: rgb(50, 194, 194);
+}
 
 #lyrics {
   font-size: 28px;
@@ -59,32 +79,6 @@ body {
   to {
     opacity: 1;
   }
-}
-
-
-.botones{
-  padding: 18px;
-  border-radius: 80px;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-}
-
-.botones a{
-  background-color: #969400;
-  padding: 10px;
-  border-radius: 80px;
-  -webkit-border-radius: 80px;
-  -moz-border-radius: 80px;
-  -ms-border-radius: 80px;
-  -o-border-radius: 80px;
-
-}
-
-.botones a:focus{
-  background-color: rgb(50, 194, 194);
 }
 
 .night {
